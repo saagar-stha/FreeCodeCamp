@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: #f0f0f0;
+            background-image: url('data:image/svg+xml,%3Csvg width="52" height="26" viewBox="0 0 52 26" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z" /%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #ff4040;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2), inset 0 0 10px rgba(0,0,0,0.2);
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 30px;
+            background-color: #333;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
+            border: 8px solid #333;
+            border-radius: 50%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffde00;
+            text-shadow: 2px 2px #3c5aa6;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .search-container {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        #search-input {
+            flex-grow: 1;
+            padding: 15px;
+            font-size: 16px;
+            border: 3px solid #333;
+            border-radius: 10px 0 0 10px;
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        #search-button {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #3c5aa6;
+            color: white;
+            border: 3px solid #333;
+            border-left: none;
+            border-radius: 0 10px 10px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        #search-button:hover {
+            background-color: #2a3f75;
+        }
+
+        .pokemon-info {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .pokemon-info div {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            text-align: center;
+            border: 2px solid #333;
+        }
+
+        #sprite {
+            display: block;
+            margin: 20px auto;
+            max-width: 200px;
+            image-rendering: pixelated;
+            transform: scale(2);
+        }
+
+        #types {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        #types span {
+            padding: 8px 15px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+            text-transform: uppercase;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            #search-input, #search-button {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .pokemon-info {
+                grid-template-columns: 1fr;
+            }
+        }
